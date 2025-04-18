@@ -1,0 +1,15 @@
+    .videos .container{
+        background-color: white;
+    }
+    .videos h4{
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+    .videos p{
+        padding-left: 20px;
+        padding-top: 0px;
+    }
+
+    .videos{
+        margin-bottom: 40px;
+    }

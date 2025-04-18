@@ -1,0 +1,433 @@
+:root {
+    /* color */
+    --linkblue: #4285F4;
+    --voilet: #d27fcb;
+    --darkvoilet: #aa4aa2;
+    --ultradarkvoilet: #be00af;
+    --red: red;
+    --white: white;
+    --lightgrey: #F0F0F1;
+
+    /* gradient color */
+    --voiletgradient: linear-gradient(to right, rgb(210, 127, 203), rgb(223, 170, 213), rgb(230, 192, 220), rgb(254, 215, 253));
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: var(--lightgrey);
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav {
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+    background-color: var(--white);
+    position: relative;
+}
+
+nav .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    padding: 0 20px;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+#myNavbar {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+}
+
+nav ul>li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    width: fit-content;
+    padding: 0 10px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+nav ul>li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul>li a.active,
+nav ul>li a:hover {
+    color: var(--ultradarkvoilet);
+}
+
+nav ul>li #login-btn {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    background-color: var(--voilet);
+    color: var(--white);
+}
+
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    #myNavbar {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    #myNavbar.show {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0px;
+        height: auto;
+        width: 100%;
+    }
+
+    nav ul>li {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        border-top: 1px solid rgb(231, 230, 230);
+        padding: 10px 0;
+    }
+
+    nav ul>li #login-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+/* navbar end */
+
+/* loginsignup */
+
+#loginregister {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* register */
+#register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    width: 40%;
+    border-radius: 10px;
+    background-color: var(--white);
+    display: none;
+    position: absolute;
+    top: 20%;
+    box-shadow: 0 0px 19px rgba(0, 0, 0, 0.1);
+}
+
+#register-form h2 {
+    text-transform: uppercase;
+}
+
+#register-form form {
+    width: 80%;
+}
+
+#register-form form input {
+    width: 100%;
+    padding: 5px 20px;
+    margin-top: 10px;
+    outline: none;
+}
+
+#register-form form button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px 0;
+    font-weight: bold;
+    border: none;
+    color: var(--white);
+    background-color: var(--darkvoilet);
+}
+
+#register-form form .notnow {
+    text-align: center;
+    padding-top: 5px;
+}
+
+#register-form form #login {
+    color: var(--linkblue);
+    cursor: pointer;
+}
+
+#register-form form #cls-register:hover {
+    color: var(--darkvoilet);
+    cursor: pointer;
+}
+
+/* login */
+#login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    width: 40%;
+    border-radius: 10px;
+    background-color: var(--white);
+    display: none;
+    position: absolute;
+    top: 20%;
+    box-shadow: 0 0px 19px rgba(0, 0, 0, 0.1);
+}
+
+#login-form h2 {
+    text-transform: uppercase;
+}
+
+#login-form form {
+    width: 80%;
+}
+
+#login-form form input {
+    width: 100%;
+    padding: 5px 20px;
+    margin-top: 10px;
+    outline: none;
+}
+
+#login-form form .forgot {
+    padding-top: 5px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    text-align: end;
+}
+
+#login-form form .forgot a {
+    text-decoration: none;
+}
+
+#login-form form button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px 0;
+    font-weight: bold;
+    border: none;
+    color: var(--white);
+    background-color: var(--darkvoilet);
+}
+
+
+#login-form form .notnow {
+    text-align: center;
+    padding-top: 5px;
+}
+
+#login-form form #register-btn {
+    color: var(--linkblue);
+    cursor: pointer;
+}
+
+#login-form form #cls-login:hover {
+    color: var(--darkvoilet);
+    cursor: pointer;
+}
+
+/* loginsignup end */
+
+/* createblog */
+#userblog {
+    width: 100%;
+    background: var(--voiletgradient);
+}
+
+#userblog .container {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+#userblog h3 {
+    text-align: center;
+    padding-top: 40px;
+    font-weight: bold;
+}
+
+#userblog .createblog {
+    width: 90%;
+}
+
+#userblog input {
+    width: 100%;
+    padding: 5px 10px;
+    margin-top: 15px;
+    outline: none;
+    border: none;
+}
+
+#userblog #udescription {
+    height: 80px;
+}
+
+#userblog textarea {
+    width: 100%;
+    height: 200px;
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 20px;
+}
+
+#userblog .upload {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+#userblog .upload button {
+    margin-top: 20px;
+    width: 200px;
+    border: none;
+    padding: 8px 0;
+    font-weight: bold;
+    color: white;
+    background: var(--darkvoilet);
+}
+
+/* createblog end */
+
+/* contact */
+
+#contact {
+    text-align: center;
+    padding: 40px 0;
+    background-color: var(--white);
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#contact form input {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+#contact form textarea {
+    width: 100%;
+    height: 120px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+#contact form button {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    font-weight: bold;
+    background-color: var(--voilet);
+    color: white;
+}
+
+/* contact end */
+
+/* footer */
+
+footer {
+    background-color: rgba(0, 0, 0, 0.93);
+    padding-top: 40px;
+    padding-bottom: 15px;
+}
+
+footer ul {
+    padding: 0%;
+    margin: 0%;
+
+}
+
+footer ul>li a {
+    text-decoration: none;
+    color: rgb(197, 197, 197);
+}
+
+footer p {
+    color: rgb(197, 197, 197);
+}
+
+footer .hover a:hover {
+    color: var(--darkvoilet);
+}
+
+footer #followus a {
+    text-decoration: none;
+    color: white;
+}
+
+footer h5 {
+    border-bottom: 3px solid rgb(197, 197, 197);
+}
+
+footer ul>li {
+    list-style: none;
+    color: var(--white);
+    padding: 5px 0;
+    cursor: pointer;
+    width: fit-content;
+    color: rgb(197, 197, 197);
+}
+
+/* footerend */

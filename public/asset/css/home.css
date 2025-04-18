@@ -1,0 +1,230 @@
+:root {
+    /* color */
+    --linkblue: #4285F4;
+    --voilet: #d27fcb;
+    --darkvoilet: #aa4aa2;
+    --dark-voilet: #974290;
+    --ultradarkvoilet: #be00af;
+    --red: red;
+    --white: white;
+    --lightgrey: #F0F0F1;
+
+    /* gradient color */
+    --voiletgradient: linear-gradient(to right, rgb(210, 127, 203), rgb(223, 170, 213), rgb(230, 192, 220), rgb(254, 215, 253));
+
+    /* shadow */
+    --cards: 0 0px 19px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: sans-serif; */
+}
+
+#homevideo .heading {
+    height: 70vh;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+#homevideo .heading .text {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.532);
+    padding-left: 30px;
+    color: white;
+    height: fit-content;
+    padding: 5px 0 5px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    cursor: pointer;
+    line-height: 0px;
+}
+
+#homevideo .heading .text h2{
+    font-size: 22px;
+}
+
+#homevideo .heading .text p{
+    font-size: 15px;
+}
+
+#homevideo .sub-heading p{
+    font-size: 15px;
+}
+
+#homevideo .sub-heading h2{
+    font-size: 22px;
+}
+
+#homevideo .sub-heading {
+    height: 70vh;
+}
+
+#homevideo .sub-heading .img1 {
+    height: 35vh;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+#homevideo .sub-heading .img1 .text1 {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.532);
+    padding-left: 30px;
+    color: white;
+    height: fit-content;
+    padding: 5px 0 5px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    cursor: pointer;
+    line-height: 0px;
+}
+
+#homevideo .sub-heading .img2 {
+    height: 35vh;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+#homevideo .sub-heading .img2 .text2 {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.532);
+    padding-left: 30px;
+    color: white;
+    height: fit-content;
+    padding: 5px 0 5px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    cursor: pointer;
+    line-height: 0px;
+}
+
+/*  */
+
+#homelatest {
+    background: var(--lightgrey);
+}
+
+#homelatest .new-content>li {
+    list-style: none;
+    margin-top: 20px;
+    box-shadow: var(--cards);
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--white);
+}
+
+#homelatest img {
+    border-radius: 10px;
+}
+
+#homelatest .feature-content>.feature-cards {
+    overflow: hidden;
+    margin-right: 20px;
+    margin-top: 12px;
+    border-radius: 10px;
+    box-shadow: var(--cards);
+    padding: 10px;
+    background-color: var(--white);
+}
+
+#homelatest .feature-content>.feature-cards img {
+    height: 170px;
+    width: 100%;
+}
+
+#homelatest .feature-content p {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+/* card1-main */
+
+#card1-main .cards {
+    display: flex;
+    background-color: var(--white);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: var(--cards);
+    margin: 0 10px;
+}
+
+#card1-main {
+    margin-top: 20px;
+}
+
+#card1-main h2 {
+    display: none;
+}
+
+.cards:hover {
+    cursor: pointer;
+}
+
+.cards h3 {
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+.cards {
+    font-size: 15px;
+}
+
+@media (max-width:1024px) {
+    .cards:hover {
+        cursor: pointer;
+    }
+
+    .cards h3 {
+        font-size: 15px;
+        padding-top: 10px;
+    }
+
+    .cards {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width:768px) {
+    .cards:hover {
+        cursor: pointer;
+    }
+
+    .cards h3 {
+        font-size: 15px;
+        padding-top: 10px;
+    }
+
+    .cards {
+        font-size: 12px;
+    }
+
+    #homevideo .sub-heading {
+        display: none;
+    }
+    #homevideo .heading {
+        height: auto;
+    }
+
+    #homevideo .heading img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+
+/* card1-main end */
